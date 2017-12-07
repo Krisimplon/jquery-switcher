@@ -4,7 +4,16 @@ var species = {
 	fish   : "fish.jpg"
 };
 
-function main(){
+function main () {
+$('.button').click(function() {
+	var animal = $(this).attr('data-animal')
+	var image = species[animal];
+	$("#holder").html('<img src="img/'+image+'"/>');
+})
+}
+	// body...
+
+
 	/* 
 	tout votre code doit se trouver dans cette fonction,
 	vous pouvez biensur créer d'autres fonctions si nécessaire
@@ -17,10 +26,8 @@ function main(){
 	// 5. inserez cet élément dans l'élément ayant l'id holder
 	// 
 	// Conseils : avancez étape par étape, console.log et debugger autant que nécessaires !
-	
-	
-	 
-}
+
+
 
 $(document).ready(function(){
 	main();
